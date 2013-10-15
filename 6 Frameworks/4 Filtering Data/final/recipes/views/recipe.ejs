@@ -1,0 +1,14 @@
+<h1><%= name %></h1>
+
+<h2>Ingredients</h2>
+<ul>
+<!-- here we are expecting "ingredients" to be an array and we are calling the forEach() method of that array. -->
+<% ingredients.forEach(function(ingredient){ %>	<!-- we pass in a function that takes in the array element as an argument and names it ingredient. Then we output it in the list -->
+  <li><%= ingredient %></li>
+<% }) %>
+</ul>
+
+<h2>Directions</h2>
+<p><%= directions %></p>
+
+<a href="/recipes">Return to the recipes list</a>

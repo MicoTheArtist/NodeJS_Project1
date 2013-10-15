@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script type="text/javascript" charset="utf-8">
+	var socket = io.connect('http://localhost:3000');
+
+	socket.on('entrance', function  (data) {
+		document.write('<p>' + data.message + '</p>');
+	});
+
+	socket.on('exit', function  (data) {
+		document.write('<p>' + data.message + '</p>');
+	});
+	// here we have a chat event listener that runs the function(data) {} when triggered
+	socket.on('chat', function  (data) {
+		document.write('<p>' + data.message + '</p>');
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<!---
+	/// console in the browser commands
+    
+	socket.emit('chat',{message: 'hi'}); // This event is sent from the browser to the server.js
+    										// The event is then sent from the server to all of the open "chat_room" connections
+-->

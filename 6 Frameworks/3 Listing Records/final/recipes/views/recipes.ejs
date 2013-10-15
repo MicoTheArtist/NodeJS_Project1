@@ -1,0 +1,7 @@
+<h1>All Recipes</h1>
+
+<ul>
+<% recipes.forEach(function(recipe){ %>	<!-- we have added a loop here for the variable array named recipes.  We are calling the forEach on the array and then passing in a function to handle every array element as "recipe" -->
+  <li><a href="/recipes/<%= recipe.url %>"><%= recipe.name %></a></li>	<!-- in list item we are expecting every recipe to have a "url" property as well as "name" property. Note that we are escaping the output of values using "<%" -->
+<% }) %>
+</ul>

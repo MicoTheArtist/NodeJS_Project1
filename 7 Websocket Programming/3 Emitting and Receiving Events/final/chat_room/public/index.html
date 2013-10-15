@@ -1,0 +1,20 @@
+<html>
+<head>
+<!-- first connect to the socket.io library  -->
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script type="text/javascript" charset="utf-8">
+	var socket = io.connect('http://localhost:3000');	  // we make a socket.io connection 
+	
+	socket.on('entrance', function  (data) {	// we are also asigning a function to the entrance event 
+		// whenever we get data from the socket we are going to write it directly to the document.
+		document.write('<p>' + data.message + '</p>');
+		// here we are assuming data has a property called message
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+<!-- after emiting an event from the server side we can listen for it and than handle it. -->

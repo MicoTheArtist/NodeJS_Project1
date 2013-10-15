@@ -1,0 +1,77 @@
+<!doctype html>
+<head>
+    <style type="text/css" media="screen">
+		div#chatroom {
+			display: block;
+			height: 300px;
+			border: 1px solid #999;
+			overflow: auto;
+			width: 100%;
+			margin-bottom: 10px;
+			position: relative;
+		}
+	
+		ul#chat_log {
+			list-style: none;
+			position: absolute;
+			bottom: 0px;
+		}
+	
+		input#chat_box {
+			width: 99%;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="chatroom">
+    	<ul id="chat_log">
+        </ul>
+    </div>
+    
+    <input type="text" name="chat_box" value="" id="chat_box" placeholder="type to chat...">
+
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+			var log_chat_message = function(message, type) {
+				console.log(type);
+				var li_node = document.createElement('li');
+				var chat_node = document.querySelector('ul#chat_log');
+				
+				if (type === 'system') {
+					li_node.innerHTML = '<b>'+message+'</b>';
+				} else if (type === 'leave') {
+					li_node.innerHTML = '<b style="color:red">'+message+'</b>';
+				} else if (type === 'normal') {
+					li_node.innerHTML = message;
+				}
+				chat_node.appendChild(li_node);
+			}
+			
+			var socket = io.connect('http://localhost:3000');
+			
+			socket.on('entrance', function(data){
+				log_chat_message(data.message, 'system');
+			});
+			
+			socket.on('exit', function(data) {
+				log_chat_message(data.message, 'leave');
+			});
+			
+			socket.on('chat', function(data) {
+				log_chat_message(data.message, 'normal');
+			});			
+			
+			var chatBox_node = document.querySelector('input#chat_box');
+			
+			chatBox_node.addEventListener('keydown', function(event) {
+				if (event.which == 13) {
+					socket.emit('chat', {message: chatBox_node.value});
+					chatBox_node.value = '';
+				}
+			}, false);
+	</script>
+
+</body>
+</html>

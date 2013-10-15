@@ -1,0 +1,10 @@
+<!doctype html>
+<title><!= title %></title>
+<style type="text/css" media="screen">
+	body { font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif; }
+	label {
+		margin-top: 10px;
+		display: block;	
+	}
+</style>
+</html>

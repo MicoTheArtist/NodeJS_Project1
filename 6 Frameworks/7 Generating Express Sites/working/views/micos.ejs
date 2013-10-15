@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    -->
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->    
+    <link media="all" rel="stylesheet" href="http://localhost:8888/MicosWebsiteHTML/styles/css/main.css">
+</head>
+<body>
+    <div class="errorMessage" id="">
+        <article class="blueSolideSmallBackground">
+          <a href="#closeBtn" class="closeBtn" data-icon="close"></a>
+          <div class="syntaxError">Syntax Error</div>
+          <div class="enterValidName">Please Enter a Valid Name.</div>
+          <a href="#ok" class="oK_button">OK</a>
+        </article>	<!-- blueTransparentBackground -->
+    </div>	<!-- errorMessage -->
+
+	    <div class="imageOverlayBackground close">
+        <div class="blueBackWrapper">
+            <a href="#" class="closeBtn" style="color:black;">
+                <div class="closeIcon" data-icon="close"></div>
+            </a>
+            <div class="row whiteImageBack">
+                <img class="latestWorkLarge" src="" alt="The Concerto Network">
+                <h2 class="td title">The Electric Violinist / The Concerto Network</h2>
+                <p class="td subTitle">(marketing and social networking website application)</p>
+                <a class="td websiteName" href="www.theelectricviolinist.com">www.theelectricviolinist.com</a>
+            </div>
+        </div>
+    </div>	<header id="topBlueBack">
+        <h2 class="hide">Manuel Ryan Espinosa</h2>
+        <article id="nameAndContactHeaderWrap">
+        	<div class="lefColumn">
+				<a class="name" href="http://localhost:8888/MicosWebsiteHTML/controller/home/index.php">Manuel Ryan Espinosa</a>
+                <h2>Front-End Web Developer &frasl; Engineer</h2>
+            </div>	<!-- lefColumn -->
+            <div class="rightColumn">
+            	<h2 class="hide">Contact Information</h2>
+            	<a href="tel:9492780625" class="row">
+                	<div class="td1" data-icon="phone"></div>
+                    <h3 class="td2">(949) 278-0625</h3>
+                </a>
+            	<a href="#" class="row">
+                	<div class="td1" data-icon="email"></div>
+                    <h3 class="td2">mico@nolimitsgallery.com</h3>
+                </a>
+            	<a href="http://www.linkedin.com/in/manuelryanespinosa/" class="row">
+                	<div class="td1" data-icon="linkedin"></div>
+                    <h3 class="td2">manuel-ryan-espinosa</h3>
+                </a>
+            </div>	<!-- rightColumn -->
+        </article>	<!-- nameAndContactHeaderWrap -->
+        <nav class="threeLines">
+            <h2 class="hide">Main Menu</h2>
+            <div class="row topOpenCloseBtnWrapper">
+                <div class="td"></div>
+                <a class="menuIcon open" data-icon="menu" href="#"></a>
+                <a class="closeIcon close" data-icon="CloseX" href="#"></a>
+                <!-- <div class="menuIcon open" data-icon="menu"></div> -->
+            </div>	<!-- topOpenCloseBtn -->
+            <div class="sliderMask">
+            	<div class="slidingBox box1 td">
+                    <a class="row NaviBtn home" href="http://localhost:8888/MicosWebsiteHTML/home">
+                        <div class="td homeIcon" data-icon="home"></div>
+                        <h3 class="td title">Home</h3>
+                    </a>	<!-- row NaviBtn home -->
+                    <a class="row NaviBtn work" href="#">
+                        <div class="td workIcon" data-icon="work"></div>
+                        <h3 class="td title">Work</h3>
+                    </a>	<!-- row NaviBtn work -->
+                    <a class="row NaviBtn resume" href="http://localhost:8888/MicosWebsiteHTML/resume">
+                        <div class="td resumeIcon" data-icon="resume"></div>
+                        <h3 class="td title">Resume</h3>
+                    </a>	<!-- row NaviBtn resume -->
+                    <a class="row NaviBtn phone" href="http://localhost:8888/MicosWebsiteHTML/contact">
+                        <div class="td contactIcon" data-icon="phone"></div>
+                        <h3 class="td title">Contact</h3>
+                    </a>	<!-- row NaviBtn contact -->
+                </div>	<!-- slidingBox box1 td -->
+            	<div class="slidingBox box2 td">
+                	<a href="#" class="workSlideTitle row">
+                    	<div class="backArrowIcon td" data-icon="backArrow"></div>
+                    	<div class="workIcon td" data-icon="work"></div>
+                        <div class="text td">WORK</div>
+					</a>	<!-- workSlideTitle row -->
+                    <div class="subNavi2 row">
+                    	<a class="sub2Btn row" href="http://localhost:8888/MicosWebsiteHTML/latestWork">
+	                    	<div class="plusSign td">+</div>
+                            <div class="btnTitle td">Latest Work</div>
+						</a>  <!-- sub2Btn row -->
+                    	<a class="sub2Btn row" href="http://localhost:8888/MicosWebsiteHTML/sandbox">
+	                    	<div class="plusSign td">+</div>
+                            <div class="btnTitle td">Sandbox</div>
+						</a>  <!-- sub2Btn row -->
+                    </div>	<!-- subNavi2 row -->
+                </div>	<!-- slidingBox box2 td -->
+            </div>	<!-- sliderMask -->
+        </nav>	<!-- smallSizeMenuBtns -->
+	</header>
+
+	<div id="body_content" class="whiteBack">
+	<section id="centerBodyContainer">
+	<div class="home">
+		    	<div class="row1">
+            <div class="pageTitle"><!-- Home --><span class="hide">Page:</span> <span></span></div>
+
+            <div id="mainNavigation">
+                <!-- <h2 class="hide">Main Navigation</h2> -->
+                <a class="homeBtn" href="http://localhost:8888/MicosWebsiteHTML/home">
+                    <div class="home td" data-icon="home" ></div>
+                    <div class="title">Home</div>
+                </a>
+                <a class="workBtn" href="http://localhost:8888/MicosWebsiteHTML/latestWork">
+                    <div class="work td" data-icon="work" ></div>
+                    <div class="title">Work</div>
+                </a>
+                <a class="resumeBtn" href="http://localhost:8888/MicosWebsiteHTML/resume">
+                    <div class="resume td" data-icon="resume" ></div>
+                    <div class="title">Resume</div>
+                </a>
+                <a class="contactBtn" href="http://localhost:8888/MicosWebsiteHTML/contact">
+                    <div class="phone td" data-icon="phone" ></div>
+                    <div class="title">Contact</div>
+                </a>
+            </div>	<!-- mainNavigation -->
+        </div>
+        <div class="row MobileTitle">
+            <div class="pageTitle"><!-- Home --><span class="hide">Page:</span> <span></span></div>
+        </div>        
+        <div id="home">
+            <h2 class="hide">Home Page</h2>
+            <article class="TopBlueWrapper common">
+                <div class="row2">
+                    <div class="leftColumn td">
+                        <div class="row wrapper">
+                            <img class="profileImage" src="http://localhost:8888/MicosWebsiteHTML/img/MicosPortrait_2x2_98px_IMG_4286.jpg" alt="Manuel Ryan Espinosa" width="97" height="97">
+                        </div>
+                        <div class="row contactInfo">
+                            <h2 class="hide">Contact Information</h2>
+                            <a href="tel:9492780625" class="row">
+                                <div class="td1" data-icon="phone"></div>
+                                <h3 class="td2">(949) 278-0625</h3>
+                            </a>
+                            <a href="#" class="row">
+                                <div class="td1" data-icon="email"></div>
+                                <h3 class="td2">mico@nolimitsgallery.com</h3>
+                            </a>
+                            <a href="#" class="row">
+                                <div class="td1" data-icon="linkedin"></div>
+                                <h3 class="td2">manuel-ryan-espinosa</h3>
+                            </a>
+                        </div>
+                    </div>	<!-- leftColumn td -->
+                    
+                    <div class="rigthColumn td">
+                        <article id="homePageAnimation">
+                            <h2 class="hide">Intro Animation</h2>
+                            <div class="transparentWrapper row">
+                                animation goes here
+                            </div>
+                            <div class="naviDots row">
+                                <a href="#" class="oneBtn" data-icon="circle"></a>
+                                <a href="#" class="twoBtn" data-icon="circle"></a>
+                                <a href="#" class="threeBtn" data-icon="circle"></a>
+                                <a href="#" class="fourBtn" data-icon="circle"></a>
+                                <a href="#" class="fiveBtn" data-icon="circle"></a>
+                            </div>
+                        </article>
+                        <article id="naviItemsBelowAnimation">
+                            <h2 class="hide">Items of Importance Navigation Buttons</h2>
+                            <a class="latestWorkBtn td" href="http://localhost:8888/MicosWebsiteHTML/controller/latestWork/latestWork.php">
+                                <div class="iconAndTitleWrapper">
+                                    <div class="workIcon" data-icon="work"></div>
+                                    <div class="title">Latest Work</div>
+                                    <div class="rigthTwo" data-icon="right"></div>
+                                </div>
+                            </a>
+                            <a class="resumeBtn td" href="http://localhost:8888/MicosWebsiteHTML/controller/resume/resume.php">
+                                <div class="iconAndTitleWrapper">
+                                    <div class="resumeIcon" data-icon="resume"></div>
+                                    <div class="title">Resume</div>
+                                    <div class="rigthTwo" data-icon="right"></div>
+                                </div>
+                            </a>
+                            <a class="contactBtn td" href="http://localhost:8888/MicosWebsiteHTML/controller/contact/contact.php">
+                                <div class="iconAndTitleWrapper">
+                                    <div class="contactIcon" data-icon="phone"></div>
+                                    <div class="title">Contact</div>
+                                    <div class="rigthTwo" data-icon="right"></div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>	<!-- rigthColumn td -->
+                </div>
+            </article>	<!-- TopBlueWrapper common -->
+        
+            <article id="bottomBlueContactWrapper">
+                <form id="contactForm" method="post" action="#" enctype="multipart/form-data">
+                    <header id="formHeader">
+                        <h2 class="td">Contact Form</h2>
+                        <div class="td">
+                            <div class="phoneIcon" data-icon="phone"></div>
+                            <div class="phoneNumber">949-278-0625</div>
+                        </div>
+                    </header>	<!-- formHeader -->
+                    <article id="formInputFields">
+                        <h2 class="hide">Input Fields</h2>
+                        <div class="row">
+                            <div class="leftColumn td">
+                                <input class="textInputField" type="text" name="Name" value="" placeholder="Name" pattern="[A-Za-z0-9 ]+" maxlength="50">
+                                <input class="textEmailField" type="email" name="email" value="" placeholder="email">
+                            </div>
+                            <div class="rightColumn td">
+                                <p class="address">
+                                    Manuel Ryan Espinosa<br>
+                                    27 Tennessee<br>
+                                    Irvine, CA  92606<br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <textarea class="message" name="message" placeholder="Message"></textarea> 
+                            <input class="submitBtn" type="submit" name="submit" value="Submit">
+                        </div>
+                    </article>	<!-- formInputFields -->
+                </form>
+            </article>	<!-- bottomBlueContactWrapper --> 
+		
+        </div>
+
+		</div>	<!-- home -->
+    </section><!-- centerBodyContainer -->
+	</div>	<!-- whiteBack /* this is the end of the white back */ -->
+	<footer id="bottomBlueBack1234">
+    	<article class="leftColumn">
+        	<h2 class="hide">Main Navigation Items</h2>
+        	<div class="row">
+	        	<a class="td1" data-icon="home" href="http://localhost:8888/MicosWebsiteHTML/home"></a>
+                <a class="td2" href="http://localhost:8888/MicosWebsiteHTML/home">Home</a>
+			</div>
+        	<div class="row">
+	        	<a class="td1" data-icon="work" href="http://localhost:8888/MicosWebsiteHTML/latestWork"></a>
+                <a class="td2" href="http://localhost:8888/MicosWebsiteHTML/latestWork">Work</a>
+			</div>
+        	<div class="row">
+	        	<a class="td1" data-icon="resume" href="http://localhost:8888/MicosWebsiteHTML/resume"></a>
+                <a class="td2" href="http://localhost:8888/MicosWebsiteHTML/resume">Resume</a>
+			</div>
+        	<div class="row">
+  	        	<a class="td1" data-icon="phone" href="http://localhost:8888/MicosWebsiteHTML/contact"></a>
+                <a class="td2" href="http://localhost:8888/MicosWebsiteHTML/contact">Contact</a>
+			</div>
+        </article>
+        
+        <article class="middleColumn">
+			<h2>Latest Work</h2>
+            <div class="row">
+            	<a class="linkToLatest" href="http://localhost:8888/MicosWebsiteHTML/latestWork">
+                    <div class="td1">
+                        <div>
+                            <img class="leftImg" src="http://localhost:8888/MicosWebsiteHTML/img/ProfessionWebsite77x63.jpg" width="77" height="63" alt="Concerto Website">
+                        </div>
+                    </div>
+                    <div class="td2">
+                        <h3>Professional Website</h3>
+                        <div class="website">www.nolimitsgallery.com</div>
+                    </div>
+                </a>
+            </div>
+            <div class="row">
+            	<a class="linkToLatest" href="http://localhost:8888/MicosWebsiteHTML/latestWork">
+                    <div class="td1">
+                        <div>
+                            <img class="leftImg" src="http://localhost:8888/MicosWebsiteHTML/img/Concerto77x63.jpg" width="77" height="63" alt="Concerto Website">
+                        </div>
+                    </div>
+                    <div class="td2">
+                        <h3>The Electric Violinist &frasl;<br> The Concerto Network</h3>
+                        <div class="website">www.theelectricviolinist.com</div>
+                    </div>
+                </a>
+            </div>
+        </article>	<!-- middleColumn -->
+        
+        <article class="rightColumnFooter"> 
+			<h2>Contact Info</h2>
+            <div class="row">
+            	<div data-icon="phone"></div>
+                <div class="phoneNumber"><h3><a href="tel:9492780625">(949) 278-0625</a></h3></div>
+            </div>
+            <div class="row">
+            	<div data-icon="email"></div>
+                <a href="#" class="email"><h3>mico@nolimitsgallery.com</h3></a>
+            </div>
+            <div class="row">
+            	<div data-icon="linkedin"></div>
+                <a href="http://www.linkedin.com/in/manuelryanespinosa/" class="linkedin" target="_blank"><h3>manuel-ryan-espinosa</h3></a>
+            </div>
+        </article>	<!-- rightColumnFooter -->
+        <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script async src=http://localhost:8888/MicosWebsiteHTML/js/main-ck.js></script>
+        		<script type="text/javascript" src="//use.typekit.net/zad6tqz.js"></script>
+	    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+	</footer>
+</body>
+</html>
