@@ -1,3 +1,3 @@
-var sequence = require('./fibonacci');
+var sequence = require('./fibonacci.js');
 
-console.log(sequence);
+console.log(sequence.data);

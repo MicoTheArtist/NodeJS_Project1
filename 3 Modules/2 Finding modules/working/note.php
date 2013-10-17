@@ -1,0 +1,1 @@
+NOTE: this section just covers how to install packages from the npmjs.org website.

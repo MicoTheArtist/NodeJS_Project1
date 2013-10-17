@@ -6,14 +6,12 @@ app.get('/recipes', function(req, res) {
 	res.send('<h1>All Recipes</h1>');
 });
 
-app.get('/recipes/:title', function(req, res){
+app.get('/recipes/:title', function(req, res) {
 	res.send('<h1>' + req.params.title + '</h1>');
 });
 
 app.get('/*', function(req, res) {
-	res.send('if all else fails, we hit this page.');
+	res.send('If all else fails, we hit this page.');
 });
 
 app.listen(3000);
-
-console.log(app);

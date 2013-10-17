@@ -1,14 +1,13 @@
 {
   "name": "response",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "start",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "dependencies" : {
-     "connect" : "*"
+	"connect" : "1.9.2"
   },
   "author": "Manuel Ryan Espinosa",
   "license": "BSD"

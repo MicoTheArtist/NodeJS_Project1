@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies" : {
-     "node-markdown" : "*"
+	"node-markdown" : "*"
   },
   "author": "Manuel Ryan Espinosa",
   "license": "BSD"

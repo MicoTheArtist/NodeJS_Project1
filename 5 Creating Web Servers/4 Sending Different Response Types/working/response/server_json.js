@@ -8,7 +8,7 @@ var my_data = {
 
 var app = connect()
 			.use(function(req, res) {
-				res.setHeader('Content-Type','application/json');
+				res.setHeader('Content-Type', 'application/json');
 				res.end(JSON.stringify(my_data));
 			})
 			.listen(3000);

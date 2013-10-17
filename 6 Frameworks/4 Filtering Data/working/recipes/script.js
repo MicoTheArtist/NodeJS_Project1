@@ -16,7 +16,7 @@ app.get('/recipes', function(req, res) {
 });
 
 app.get('/recipes/:title', function(req, res) {
-	var data = recipes.filter(function(recipe) {
+	var data = recipes.filter(function(recipe){
 		return (recipe.url === req.params.title);
 	});
 	
@@ -26,7 +26,7 @@ app.get('/recipes/:title', function(req, res) {
 		
 		res.render('recipe.ejs', data);
 	} else {
-		res.status(404).render('error.ejs', {title: 'Recipe Not Found'});
+		res.status(404).render('error.ejs', {title: 'Recipe Not Found.'});
 	}
 });
 
