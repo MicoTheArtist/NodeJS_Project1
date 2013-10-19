@@ -9,11 +9,11 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
-var app = express();	// this is setting up the express server.
+var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -30,7 +30,6 @@ if ('development' == app.get('env')) {
 // routes
 app.get('/', routes.index);
 app.get('/recipes', routes.recipes);
-app.get('/micos', routes.micos);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

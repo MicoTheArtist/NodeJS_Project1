@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "dependencies" : {
- 	"socket.io" : "0.9.6",
+	"socket.io" : "0.9.6",
 	"connect" : "1.9.2"
   },
   "author": "Manuel Ryan Espinosa",

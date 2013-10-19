@@ -9,7 +9,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/recipes', recipes.list);
-
 app.get('/recipes/:title', recipes.single);
 
 app.get('/*', function(req, res) {

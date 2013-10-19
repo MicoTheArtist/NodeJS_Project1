@@ -1,6 +1,6 @@
 var recipes = require('./data/recipes').data;
 
-exports.list = function(req, res) {
+exports.list = function(req, res){
 	res.render('recipes.ejs', {
 		title: 'Clever Kitchens - Recipe List',
 		recipes: recipes

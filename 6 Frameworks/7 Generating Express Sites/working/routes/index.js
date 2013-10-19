@@ -8,17 +8,8 @@ exports.index = function(req, res){
 };
 
 /*
- * GET recipes "index" page
+ * GET recipes page.
  */
- 
-exports.recipes = function(req, res){
-  res.render('index', { title: 'Recipes' });
-};
-
-/*
- * GET micos page
- */
- 
-exports.micos = function(req, res){
-  res.render('micos', { title: 'Manuel Ryan Espinosa | PHP Software Engineer &amp; Front End Web Developer' });
+ exports.recipes = function(req, res) {
+	res.render('index', {title: 'Recipes'});
 };

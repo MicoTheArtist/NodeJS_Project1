@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <style type="text/css" media="screen">
+	<style type="text/css" media="screen">
 		div#chatroom {
 			display: block;
 			height: 300px;
@@ -28,30 +28,29 @@
     	<ul id="chat_log">
         </ul>
     </div>
+
+	<input id="chat_box" type="text" name="chat_box" value="" placeholder="type to chat...">
     
-    <input type="text" name="chat_box" value="" id="chat_box" placeholder="type to chat...">
-
-	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
-
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script type="text/javascript" charset="utf-8">
 			var log_chat_message = function(message, type) {
-				console.log(type);
-				var li_node = document.createElement('li');
-				var chat_node = document.querySelector('ul#chat_log');
+				li_node = document.createElement('li');
+				li_node.innerHTML = message;
 				
 				if (type === 'system') {
-					li_node.innerHTML = '<b>'+message+'</b>';
+					li_node.style.fontWeight = 'bold';
 				} else if (type === 'leave') {
-					li_node.innerHTML = '<b style="color:red">'+message+'</b>';
-				} else if (type === 'normal') {
-					li_node.innerHTML = message;
+					li_node.style.fontWeight = 'bold';
+					li_node.style.color = '#F00';
 				}
-				chat_node.appendChild(li_node);
-			}
-			
+				
+				ul_node = document.querySelector('#chat_log');
+				ul_node.appendChild(li_node);
+			};
+						
 			var socket = io.connect('http://localhost:3000');
 			
-			socket.on('entrance', function(data){
+			socket.on('entrance', function(data) {
 				log_chat_message(data.message, 'system');
 			});
 			
@@ -61,17 +60,18 @@
 			
 			socket.on('chat', function(data) {
 				log_chat_message(data.message, 'normal');
-			});			
+			});		
 			
-			var chatBox_node = document.querySelector('input#chat_box');
+			var chatBox_node = document.querySelector('input#chat_box')
 			
 			chatBox_node.addEventListener('keydown', function(event) {
+				console.log(event);
 				if (event.which == 13) {
-					socket.emit('chat', {message: chatBox_node.value});
+					socket.emit('chat', {message: chatBox_node.value });
 					chatBox_node.value = '';
 				}
 			}, false);
-	</script>
 
+	</script>
 </body>
 </html>

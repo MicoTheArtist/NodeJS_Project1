@@ -1,6 +1,5 @@
 <!doctype html>
 <head>
-	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <style type="text/css" media="screen">
 		div#chatroom {
 			display: block;
@@ -29,23 +28,23 @@
     	<ul id="chat_log">
         </ul>
     </div>
-    
-    <input type="text" name="chat_box" value="" id="chat_box" placeholder="type text to chat . . .">
+	
+    <input type="text" name="chat_box" value="" id="chat_box" placeholder="tyep to chat...">
 
-
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script type="text/javascript" charset="utf-8">
-			/*
-			var log_chat_message = function(message) {
-				var li = jQuery('<li />').text(message);
+            /*
+			var log_chat_message = function(message){
+				var li = jQuery('<li/>').text(message);
 				$('#chat_log').append(li);
 			};
 			*/
 			var log_chat_message = function(message) {
 				var li_node = document.createElement('li');
-				var chat_node = document.querySelector('ul#chat_log');
-
 				li_node.innerHTML = message;
-				chat_node.appendChild(li_node);
+				
+				var ul_node = document.querySelector('ul#chat_log');
+				ul_node.appendChild(li_node);
 			};
 			
 			var socket = io.connect('http://localhost:3000');
@@ -53,7 +52,7 @@
 			socket.on('entrance', function(data) {
 				log_chat_message(data.message);
 			});
-
+			
 			socket.on('exit', function(data) {
 				log_chat_message(data.message);
 			});
@@ -69,16 +68,14 @@
 				}
 			});
 			*/
-			var myChatBox = document.querySelector('input#chat_box');
 			
-			myChatBox.addEventListener('keydown', function(event) {
-				console.log(event);
+			var chatBox_node = document.querySelector('input#chat_box');
+			chatBox_node.addEventListener('keydown', function(event) {
 				if (event.which == 13) {
-					socket.emit('chat', {message: myChatBox.value });
-					myChatBox.value = '';
+					socket.emit('chat', {message: chatBox_node.value });
+					chatBox_node.value = '';
 				}
 			}, false);
-        
 	</script>
 
 </body>

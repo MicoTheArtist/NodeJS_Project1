@@ -15,6 +15,23 @@ jQuery(document).ready(function () {
 				
 		jQuery('#chat_log').append(li);
 	};
+	
+	/*
+	var log_chat_message = function(message, type) {
+		li_node = document.createElement('li');
+		li_node.innerHTML = message;
+		
+		if (type === 'system') {
+			li_node.style.fontWeight = 'bold';
+		} else if (type === 'leave') {
+			li_node.style.fontWeight = 'bold';
+			li_node.style.color = '#F00';
+		}
+		
+		ul_node = document.querySelector('#chat_log');
+		ul_node.appendChild(li_node);
+	};
+	*/
 
 	var socket = io.connect('http://localhost:3000');
 
@@ -29,14 +46,14 @@ jQuery(document).ready(function () {
 	socket.on('chat', function  (data) {
 		log_chat_message(data.message, 'normal');
 	});
-	/*
+	
 	jQuery('#chat_box').keypress(function (event) {
 		if (event.which == 13) {
 			socket.emit('chat', {message: jQuery('#chat_box').val()});
 			jQuery('#chat_box').val('');
 		}
 	});
-	*/
+	/*
 			var myChatBox = document.querySelector('input#chat_box');
 			
 			myChatBox.addEventListener('keydown', function(event) {
@@ -46,7 +63,7 @@ jQuery(document).ready(function () {
 					myChatBox.value = '';
 				}
 			}, false);
-
+	*/
 });
 
 </script>

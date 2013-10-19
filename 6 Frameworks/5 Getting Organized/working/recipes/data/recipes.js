@@ -1,6 +1,6 @@
 exports.data = [
 	{
-		"url" : "spagetti",
+		"url" : "spaghetti",
 		"name" : "Spaghetti and Sauce",
 		"ingredients" : [
 			"1/2 pound dry spaghetti",
@@ -11,7 +11,7 @@ exports.data = [
 	},
 	{
 		"url" : "turkey-sandwich",
-		"name" : "Turkey Sandwhich",
+		"name" : "Turkey Sandwich",
 		"ingredients" : [
 			"3 thin slices of turkey breast",
 			"1 plum tomato",
